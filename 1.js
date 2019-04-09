@@ -1,6 +1,6 @@
 //Задача 1. Дано масив цілих чисел. Кожне від’ємне число замінити на 0.
 const numbers = [1, -2, 3, -4, -5, -12, 5, 66, -123123]
-numbers.forEach((x, i, arr) => x < 0 ? arr[i] = 0 : x)
+numbers.forEach((x, i, arr) => x < 0 ? arr[i] = 0 : x)  Краще так: numbers.forEach((x, i, arr) => {if(x < 0) arr[i] = 0})
 document.write(`${numbers} <br/>`)
 //Задача 2. Дано масив цін. Сформувати новий масив, який містить тільки ті ціни, які менші за задану.
 const prices = [100, 200, 350, 600, 700, 243]
@@ -32,6 +32,6 @@ const prodNumbers = [5, 11, 2, 3]
 let prod = prodNumbers.reduce((last, x) => last * x)
 document.write(`Добуток - ${prod} <br/>`)
 //Задача 9. Розробити функцію, яка би для довільної кількості чисел знаходила максимальне.
-const someNumbers = [1, 2, 3 - 1, 44, -22, 123, -12]
+const someNumbers = [1, 2, 3 - 1, 44, -22, 123, -12]   Тут краще було використати reduce
 someNumbers.sort((a, b) => b - a)
 document.write(`Максимальне число ${someNumbers[0]} <br/>`)
